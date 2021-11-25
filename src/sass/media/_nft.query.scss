@@ -1,0 +1,9 @@
+$small: 300px;
+$medium: 900px;
+$large: 1575px;
+
+@media screen and (max-width: $large) {
+  .nft {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,129 @@
+@import "variables";
+
+.header {
+  display: flex;
+//   width: 100%;
+//   max-width: 1000px;
+  justify-content: space-between;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+
+    img {
+      margin-right: 5px;
+    }
+
+    &-box {
+      max-width: 380px;
+      width: 100%;
+      display: flex;
+      outline: none;
+      border: 1px solid rgb(224, 224, 224);
+      padding: 5px;
+      border-radius: 20px;
+
+      img {
+        height: 28px;
+        width: 28px;
+        opacity: 0.5;
+      }
+
+      input {
+        border: transparent;
+        width: 100%;
+        font-family: "Nunito", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      color: $grey-text;
+      margin-right: 25px;
+      font-size: 18px;
+      font-weight: 600;
+
+      &:hover {
+        color: $grey-text-dimmed;
+      }
+    }
+  }
+
+  &__wallet {
+    &-wrapper .icon {
+      position: relative;
+      background-color: #ffffff;
+      border-radius: 50%;
+      padding: 15px;
+      margin: 10px;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &-wrapper .tooltip {
+      position: absolute;
+      top: 0;
+      font-size: 14px;
+      background-color: #ffffff;
+      color: #ffffff;
+      padding: 5px 8px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &-wrapper .tooltip::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background-color: #ffffff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &-wrapper .icon:hover .tooltip {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    &-wrapper .icon:hover span,
+    &-wrapper .icon:hover .tooltip {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    &-wrapper .wallet:hover,
+    &-wrapper .wallet:hover .tooltip,
+    &-wrapper .wallet:hover .tooltip::before {
+      background-color: #8bacf1;
+      color: #ffffff;
+    }
+  }
+}
