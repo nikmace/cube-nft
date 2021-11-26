@@ -16,12 +16,12 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
+![image](https://user-images.githubusercontent.com/39880364/143555882-6c13d3ef-1a74-46e0-b8f4-785853068482.png)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/nikmace/cube-nft">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
